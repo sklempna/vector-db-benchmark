@@ -17,6 +17,7 @@ redis = "^4.3.4"
 ipdb = "^0.13.9"
 stopit = "^1.1.2"
 opensearch-py = "^2.2.0"
+chromadb = "^0.3.29"
 
 
 [tool.poetry.dev-dependencies]
