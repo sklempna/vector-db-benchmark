@@ -7,4 +7,4 @@ NOTES.md
 results/*
 
 # Python environment files
-env/*
+env
