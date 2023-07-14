@@ -5,3 +5,6 @@ __pycache__
 NOTES.md
 
 results/*
+
+# Python environment files
+env/*
