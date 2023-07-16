@@ -281,6 +281,13 @@
     "path": "random-100/"
   },
   {
+    "name": "test-5",
+    "vector_size": 3,
+    "distance": "cosine",
+    "type": "jsonl",
+    "path": "test-5/"
+  },
+  {
     "name": "random-100-euclidean",
     "vector_size": 100,
     "distance": "l2",
