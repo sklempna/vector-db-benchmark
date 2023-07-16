@@ -51,7 +51,8 @@ class ChromaUploader(BaseUploader):
     def upload_batch(
         cls, ids: List[int], vectors: List[list], metadata: Optional[List[dict]]
     ):
-        cls.collection.add(ids=ids, embeddings=vectors)
+        id_strings = [str(elem) for elem in ids]
+        cls.collection.add(ids=id_strings, embeddings=vectors)
         # cls.client.upsert(
         #     collection_name=QDRANT_COLLECTION_NAME,
         #     points=Batch.construct(
