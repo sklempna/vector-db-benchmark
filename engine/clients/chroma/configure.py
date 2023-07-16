@@ -1,6 +1,7 @@
 from benchmark.dataset import Dataset
 from engine.base_client.configure import BaseConfigurator
 from engine.clients.chroma.config import CHROMA_COLLECTION_NAME
+from engine.clients.chroma.config import CHROMA_PORT
 
 from chromadb.config import Settings
 from chromadb import Client
@@ -14,7 +15,7 @@ class ChromaConfigurator(BaseConfigurator):
             Settings(
                 chroma_api_impl="rest",
                 chroma_server_host=host,
-                chroma_server_http_port=connection_params["port"],
+                chroma_server_http_port=CHROMA_PORT,
             )
         )
 

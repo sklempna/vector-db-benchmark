@@ -10,6 +10,7 @@ from engine.base_client.search import BaseSearcher
 # from engine.clients.qdrant.config import QDRANT_COLLECTION_NAME
 
 from engine.clients.chroma.config import CHROMA_COLLECTION_NAME
+from engine.clients.chroma.config import CHROMA_PORT
 
 # from engine.clients.qdrant.parser import QdrantConditionParser
 
@@ -37,7 +38,7 @@ class ChromaSearcher(BaseSearcher):
             Settings(
                 chroma_api_impl="rest",
                 chroma_server_host=host,
-                chroma_server_http_port=connection_params["port"],
+                chroma_server_http_port=CHROMA_PORT,
             )
         )
         cls.collection = cls.client.get_or_create_collection(CHROMA_COLLECTION_NAME)
@@ -60,5 +61,4 @@ class ChromaSearcher(BaseSearcher):
         #     ),
         # )
         res = cls.collection.query(query_embeddings=[vector], n_results=10)
-        return res
-        # return [(hit.id, hit.score) for hit in res]
+        return [(res.get("ids")[0][0], res.get("distances")[0][0])]

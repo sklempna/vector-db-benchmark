@@ -8,6 +8,7 @@ from typing import List, Optional
 from engine.base_client.upload import BaseUploader
 
 from engine.clients.chroma.config import CHROMA_COLLECTION_NAME
+from engine.clients.chroma.config import CHROMA_PORT
 
 # from engine.clients.qdrant.config import QDRANT_COLLECTION_NAME
 
@@ -28,7 +29,7 @@ class ChromaUploader(BaseUploader):
             Settings(
                 chroma_api_impl="rest",
                 chroma_server_host=host,
-                chroma_server_http_port=connection_params["port"],
+                chroma_server_http_port=CHROMA_PORT,
             )
         )
         cls.collection = cls.client.get_or_create_collection(CHROMA_COLLECTION_NAME)
