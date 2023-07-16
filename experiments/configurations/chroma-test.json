@@ -1,0 +1,12 @@
+[
+    {
+      "name": "chroma-test",
+      "engine": "chroma",
+      "connection_params": {"port": "8000"},
+      "collection_params": {},
+      "search_params": [
+        {}
+      ],
+      "upload_params": {}
+    }
+  ]

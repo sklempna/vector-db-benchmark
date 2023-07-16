@@ -26,6 +26,8 @@ from engine.clients.weaviate import (
     WeaviateUploader,
 )
 
+from engine.clients.chroma import ChromaConfigurator, ChromaSearcher, ChromaUploader
+
 ENGINE_CONFIGURATORS = {
     "qdrant": QdrantConfigurator,
     "weaviate": WeaviateConfigurator,
@@ -33,6 +35,7 @@ ENGINE_CONFIGURATORS = {
     "elastic": ElasticConfigurator,
     "opensearch": OpenSearchConfigurator,
     "redis": RedisConfigurator,
+    "chroma": ChromaConfigurator,
 }
 
 ENGINE_UPLOADERS = {
@@ -42,6 +45,7 @@ ENGINE_UPLOADERS = {
     "elastic": ElasticUploader,
     "opensearch": OpenSearchUploader,
     "redis": RedisUploader,
+    "chroma": ChromaUploader,
 }
 
 ENGINE_SEARCHERS = {
@@ -51,6 +55,7 @@ ENGINE_SEARCHERS = {
     "elastic": ElasticSearcher,
     "opensearch": OpenSearchSearcher,
     "redis": RedisSearcher,
+    "chroma": ChromaSearcher,
 }
 
 

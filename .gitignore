@@ -8,3 +8,6 @@ results/*
 
 # Python environment files
 env
+
+# VSCode file
+.vscode
