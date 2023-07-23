@@ -32,7 +32,7 @@ class ChromaUploader(BaseUploader):
                 chroma_server_http_port=CHROMA_PORT,
             )
         )
-        cls.collection = cls.client.get_or_create_collection(CHROMA_COLLECTION_NAME)
+        cls.collection = cls.client.get_collection(CHROMA_COLLECTION_NAME)
         cls.upload_params = upload_params
 
     # @classmethod

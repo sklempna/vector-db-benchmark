@@ -283,7 +283,7 @@
   {
     "name": "test-5",
     "vector_size": 3,
-    "distance": "cosine",
+    "distance": "l2",
     "type": "jsonl",
     "path": "test-5/"
   },
