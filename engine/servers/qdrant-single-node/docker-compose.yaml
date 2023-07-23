@@ -3,7 +3,9 @@ version: '3.7'
 services:
   qdrant_bench:
     image: qdrant/qdrant:v1.1.0
-    network_mode: host
+    ports:
+      - 6334:6334
+      - 6333:6333
     logging:
       driver: "json-file"
       options:
