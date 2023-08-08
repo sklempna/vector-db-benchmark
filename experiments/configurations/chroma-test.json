@@ -7,6 +7,6 @@
       "search_params": [
         {}
       ],
-      "upload_params": {}
+      "upload_params": { "parallel": 16, "batch_size": 1024 }
     }
   ]
